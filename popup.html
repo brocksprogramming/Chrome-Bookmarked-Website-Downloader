@@ -1,29 +1,35 @@
-/*
-Copyright Brock Lynch 2020-2023
-
-This file is part of Chrome Bookmarked Website Dowloader.
-
-Chrome Bookmarked Website Dowloader is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-
-Chrome Bookmarked Website Dowloader is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with Chrome Bookmarked Website Dowloader. If not, see <https://www.gnu.org/licenses/>.
-*/
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="bootstrap-4.4.1-dist\bootstrap-4.4.1-dist\css\bootstrap.css">
-		<script src="jquery/jquery-3.6.0.min.js"></script>
-	</head>
-	<body>
-		<div>
-			<button style="width:100%;float:right;"id="selectall" type="button" class="btn btn-primary">Select All</button>
-			<button style="width:100%;"id="unselectall" type="button" class="btn btn-secondary">Unselect All</button>
-			<div id="bookmarks">
-			</div>
-			<button style="width:100%;"id="getbookmarks" type="button" class="btn btn-success">Download Bookmarks</button>
-			<button style="width:100%;"id="donate-button" type="button" class="btn btn-warning">Donate</button>
-		</div>
-		<script src="popup.js"></script>
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Content Security Policy: local resources only, no inline scripts -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none';">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- FIX: all inline styles moved to popup.css -->
+    <link rel="stylesheet" href="popup.css">
+
+    <script src="jquery/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- FIX: style="width:100%" replaced with btn-block-custom class -->
+      <button id="selectall" type="button"
+              class="btn btn-primary btn-block-custom">Select All</button>
+      <button id="unselectall" type="button"
+              class="btn btn-secondary btn-block-custom">Unselect All</button>
+      <div id="bookmarks"></div>
+      <button id="getbookmarks" type="button"
+              class="btn btn-success btn-block-custom">Download Bookmarks</button>
+    <div class="donation-container">
+        <a href="#" id="donate-button" class="paypal-btn">
+            Support This Extension
+        </a>
+    </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
 </html>

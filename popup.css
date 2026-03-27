@@ -1,0 +1,180 @@
+/* Full-width buttons with spacing */
+.btn-block-custom {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* ── Bookmark list container ───────────────────────── */
+#bookmarks {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+/* ── Individual bookmark rows ──────────────────────── */
+#bookmarks .input-group {
+  display: flex;
+  align-items: center;        /* vertically centres checkbox with title */
+  margin-bottom: 4px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: background-color 0.15s ease,
+              border-color     0.15s ease,
+              box-shadow       0.15s ease;
+}
+
+#bookmarks .input-group:hover {
+  background-color: #e8f0fe;
+  border-color: #c2d4f8;
+  box-shadow: 0 1px 4px rgba(66, 133, 244, 0.12);
+}
+
+/* ── Highlight selected rows ───────────────────────── */
+#bookmarks .input-group:has(input[type="checkbox"]:checked:not(:disabled)) {
+  background-color: #d2e3fc;
+  border-color: #93b8f7;
+}
+
+/* ── Checkbox cell ─────────────────────────────────── */
+#bookmarks .input-group-text {
+  display: flex;
+  align-items: center;        /* keeps checkbox centred in its cell */
+  justify-content: center;
+  background-color: transparent;
+  border: none;               /* remove default BS border between cell and input */
+  padding: 0 12px;
+  align-self: stretch;        /* fills full row height */
+}
+
+/* ── Checkbox itself ───────────────────────────────── */
+#bookmarks .input-group-text input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;                  /* reset any browser default margins */
+  cursor: pointer;
+  accent-color: #4285f4;
+}
+
+/* ── Title input ───────────────────────────────────── */
+#bookmarks .bookmark-title {
+  flex: 1;                    /* fills remaining row width */
+  border: none;               /* remove all borders so row border is the only one */
+  background-color: transparent;
+  color: #212529;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 8px 10px;
+  cursor: default;
+  box-shadow: none;
+}
+
+#bookmarks .bookmark-title:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+/* ── Already-downloaded rows (checked + disabled) ──── */
+#bookmarks .input-group:has(input:disabled) {
+  opacity: 0.45;
+  background-color: #f1f3f5;
+  border-color: transparent;
+}
+
+#bookmarks .input-group:has(input:disabled):hover {
+  background-color: #f1f3f5;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+/* ── Buttons ───────────────────────────────────────── */
+
+/* Select All — refined blue */
+#selectall {
+  background-color: #3a7bd5;
+  border-color: #2f6bbf;
+  color: #ffffff;
+}
+#selectall:hover {
+  background-color: #2f6bbf;
+  border-color: #2558a3;
+  color: #ffffff;
+}
+#selectall:active {
+  background-color: #2558a3;
+  border-color: #1e4a8c;
+  color: #ffffff;
+}
+
+/* Unselect All — refined grey */
+#unselectall {
+  background-color: #6c757d;
+  border-color: #5f666d;
+  color: #ffffff;
+}
+#unselectall:hover {
+  background-color: #5a6268;
+  border-color: #4e555b;
+  color: #ffffff;
+}
+#unselectall:active {
+  background-color: #4e555b;
+  border-color: #42474d;
+  color: #ffffff;
+}
+
+/* Download Bookmarks — refined green */
+#getbookmarks {
+  background-color: #2e9e5b;
+  border-color: #268a4e;
+  color: #ffffff;
+}
+#getbookmarks:hover {
+  background-color: #268a4e;
+  border-color: #1e7641;
+  color: #ffffff;
+}
+#getbookmarks:active {
+  background-color: #1e7641;
+  border-color: #186234;
+  color: #ffffff;
+}
+
+/* Donate — refined amber */
+#donate-button {
+  background-color: #f0a500;
+  border-color: #d49200;
+  color: #212529;
+}
+#donate-button:hover {
+  background-color: #d49200;
+  border-color: #b87e00;
+  color: #212529;
+}
+#donate-button:active {
+  background-color: #b87e00;
+  border-color: #9c6a00;
+  color: #212529;
+}
+/* Paypal donation button styles */
+.donation-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.paypal-btn {
+    display: inline-block;
+    background-color: #0070ba;
+    color: #ffffff;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.paypal-btn:hover {
+    background-color: #005ea6;
+}
