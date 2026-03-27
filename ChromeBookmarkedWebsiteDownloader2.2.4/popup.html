@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Content Security Policy: local resources only, no inline scripts -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none';">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- FIX: all inline styles moved to popup.css -->
+    <link rel="stylesheet" href="popup.css">
+
+    <script src="jquery/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- FIX: style="width:100%" replaced with btn-block-custom class -->
+      <button id="selectall" type="button"
+              class="btn btn-primary btn-block-custom">Select All</button>
+      <button id="unselectall" type="button"
+              class="btn btn-secondary btn-block-custom">Unselect All</button>
+      <div id="bookmarks"></div>
+      <button id="getbookmarks" type="button"
+              class="btn btn-success btn-block-custom">Download Bookmarks</button>
+    <div class="donation-container">
+        <a href="#" id="donate-button" class="paypal-btn">
+            Support This Extension
+        </a>
+    </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

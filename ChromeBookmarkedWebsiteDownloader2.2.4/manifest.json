@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Chrome Bookmarked Website Downloader",
+	"description": "Chrome Bookmarked Website Downloader is an extension that allows users to download all the websites they have bookmarked.",
+	"version": "2.2.4",
+	"manifest_version": 3,
+	"permissions": ["downloads", "bookmarks", "storage"],
+    "background": {
+    "service_worker": "service_worker.js"
+    },
+	"action": {
+		"default_title": "Chrome Bookmarked Website Downloader",
+		"default_popup": "popup.html",
+		"default_icon": "images/bookmark_downloader_image16x16.png"
+	},
+	"icons": {
+		"16": "images/bookmark_downloader_image16x16.png",
+		"32": "images/bookmark_downloader_image32x32.png",
+		"48": "images/bookmark_downloader_image48x48.png",
+		"128": "images/bookmark_downloader_image128x128.png"
+	}
+}
